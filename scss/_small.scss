@@ -56,7 +56,12 @@ nav {
         }
     }
 
-    li.active {background-color: rgb(209, 106, 175);}
+    li.active {
+        background-color: rgb(209, 106, 175);
+        a {
+        color:white;
+        }
+    }
 
     a {
         display:block;
@@ -64,7 +69,7 @@ nav {
         color:$fontColor;
         text-align:center;
         text-decoration: none;
-        &:hover {color: rgb(211, 151, 191)}
+        &:hover {color: rgb(211, 151, 191)};
     }
 }
 

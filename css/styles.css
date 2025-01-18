@@ -364,6 +364,9 @@ nav ul li {
 nav li.active {
   background-color: rgb(209, 106, 175);
 }
+nav li.active a {
+  color: white;
+}
 nav a {
   display: block;
   padding: 0.75rem;
