@@ -364,8 +364,9 @@ nav ul li {
 nav li.active {
   background-color: rgb(209, 106, 175);
 }
-nav li.active a {
-  color: white;
+nav li.active a .activeSpan {
+  background: white;
+  padding: 0.25rem;
 }
 nav a {
   display: block;
@@ -373,6 +374,7 @@ nav a {
   color: #333;
   text-align: center;
   text-decoration: none;
+  color: #333;
 }
 nav a:hover {
   color: rgb(211, 151, 191);
