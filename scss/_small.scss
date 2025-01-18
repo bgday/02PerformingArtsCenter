@@ -74,7 +74,10 @@ nav {
     text-decoration: none;
     color: $fontColor;
     &:hover {
-      color: rgb(211, 151, 191);
+      .inactiveSpan {
+        background: white;
+        padding: 0.25rem;
+      }
     }
   }
 }
