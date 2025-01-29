@@ -14,6 +14,9 @@ html {
 }
 
 body {
+  background-color: rgb(245, 245, 245);
+}
+body {
   height: 100%;
   font-family: $defaultFont;
   font-weight: $normalWeight;
@@ -23,18 +26,20 @@ body {
 //header
 
 #headerWrapper {
-  background-color: rgb(13, 32, 51);
-  color: rgb(255, 255, 255);
+  background-color: $primaryColor;
+  color: $secondaryColor;
 }
 
 header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding: 1rem $gutter;
-  gap: 10px;
+  img {
+    display: block;
+  }
   h1 {
-    margin: 0;
-    font-size: 1.2rem;
+    margin: auto 0.5em;
+    font-size: 2rem;
     font-weight: $normalWeight;
   }
 }
@@ -42,42 +47,65 @@ header {
 // nav
 
 #navWrapper {
-  background-color: aquamarine;
+  background-color: $secondaryColor;
 }
 
 nav {
   ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
-    display: flex;
+    display: block;
+    padding: 0.5em 0;
     li {
-      flex: 1;
+      margin: 0 0.5em;
     }
   }
 
   li.active {
-    background-color: rgb(209, 106, 175);
     a {
-      .activeSpan {
-        background: white;
-        padding: 0.25rem;
-      }
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      color: $primaryColor;
     }
   }
 
   a {
     display: block;
-    padding: 0.75rem;
-    color: $fontColor;
-    text-align: center;
+    padding: 0.5rem;
     text-decoration: none;
-    color: $fontColor;
+    color: $accentColor;
     &:hover {
-      .inactiveSpan {
-        background: white;
-        padding: 0.25rem;
-      }
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      color: $primaryColor;
+    }
+  }
+}
+
+// main
+#mainWrapper {
+  h1 {
+    margin: 2rem 1rem;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  div {
+    width: 100%;
+    padding: 1rem $gutter;
+    text-align: center;
+    h2 {
+      background-color: $secondaryColor;
+      padding: 0.65rem;
+      margin: 0;
+      border-radius: 10px 10px 0 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 10px 10px;
     }
   }
 }
@@ -85,11 +113,10 @@ nav {
 // footer
 
 #footerWrapper {
-  background-color: rgb(13, 32, 51);
+  background-color: $secondaryColor;
   padding: 0.5rem $gutter;
-  color: white;
+  color: $primaryColor;
   p {
-    margin: 0;
     font-weight: $lightWeight;
     text-align: center;
   }
